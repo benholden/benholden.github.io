@@ -227,6 +227,14 @@ $(document).ready(function() {
 	$('[data-toggle="popover"]').on('click', function (e) {
 		$('[data-toggle="popover"]').not(this).popover('hide');
 	});
+
+	//toggle content
+	$('.section-content__title__shrink').click(function(e) {
+		$(this).closest('.section-table').toggleClass('minimised');
+		$(this).find('span').toggleClass('glyphicon-resize-small');
+		$(this).find('span').toggleClass('glyphicon-resize-full');
+		e.preventDefault();
+	});
 });
 
 

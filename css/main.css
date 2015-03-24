@@ -282,7 +282,6 @@ p:last-child {
 
 .section-content {
 	padding: 0px;
-
 	display: block;
 	max-height: 90%;
 	overflow: auto;
@@ -309,23 +308,17 @@ h2 .glyphicon {
 
 .section-content__title__shrink {
 	position: absolute;
-	font-size: 28px;
+	font-size: 20px;
 	border: 1px solid #fff;
-	padding: 10px;
-	top: 28px;
-	right: 28px;
+	padding: 8px;
+	top: 30px;
+	right: 30px;
 	color: #fff;
 }
 
 	.section-content__title__shrink:hover,
 	.section-content__title__shrink:focus,
 	.section-content__title__shrink:active {
-		position: absolute;
-		font-size: 28px;
-		border: 1px solid #fff;
-		padding: 10px;
-		top: 28px;
-		right: 28px;
 		color: #fff;
 		text-decoration: none;
 		background-color: rgba(49,68,72,1);
@@ -338,6 +331,43 @@ h2 .glyphicon {
 .section-content__body {
 	padding: 28px;
 	background-color: rgba(255,255,255,0.9);
+}
+
+.minimised.section-table {
+	display: block;
+	height: auto;
+	position: absolute;
+	z-index: 1000;
+	top: 70px;
+	left: 0;
+}
+
+.loft .minimised.section-table {
+	top: 22%;
+}
+
+.minimised .section-content {
+	position: absolute;
+	overflow: visible;
+	right: 5%;
+	top: 22%;
+}
+
+.minimised .section-content__title {
+	padding: 20px 94px 20px 20px;
+}
+
+.minimised .section-content__title h2 {
+	font-size: 22px;
+}
+
+.minimised .section-content__title__shrink {
+	top: 12px;
+	right: 12px;
+}
+
+.minimised .section-content__body {
+	display: none;
 }
 
 .btn {
@@ -617,11 +647,15 @@ h2 .glyphicon {
 	color: #fff;
 	text-align: center;
 	margin-top: 300px;
+	overflow: visible;
+	padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
 	.sky__section-content {
 		margin-top: 0px;
+
+
 	}
 }
 
