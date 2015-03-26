@@ -243,6 +243,7 @@ p:last-child {
 .page-section > .container {
 	height: 100%;
 	position: relative;
+	width: 100%;
 }
 
 .section-table {
