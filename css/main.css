@@ -240,6 +240,12 @@ p:last-child {
 	background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 767px) {
+	.page-section {
+		height:auto!important;
+	}
+}
+
 .page-section > .container {
 	height: 100%;
 	position: relative;
@@ -248,10 +254,18 @@ p:last-child {
 .section-table {
 	display: table;
 	height: 100%;
-/*	position: absolute;*/
 	z-index: 1000;
 	top: 0;
 	left: 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+	.section-table {
+		position: absolute;
+		margin: 0;
+	}
 }
 
 .section-1 .section-table {
@@ -299,7 +313,7 @@ p:last-child {
 	box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 	.section-content {
 		overflow: auto;
 	}
@@ -329,6 +343,13 @@ h2 .glyphicon {
 	top: 30px;
 	right: 30px;
 	color: #fff;
+	display: none;
+}
+
+@media only screen and (min-width: 992px) {
+	.section-content__title__shrink {
+		display: block;
+	}
 }
 
 	.section-content__title__shrink:hover,
@@ -787,9 +808,15 @@ h2 .glyphicon {
 	}
 
 .loft__contents {
-/*	position: absolute;*/
+	position: absolute;
 	height: 100%;
 	right: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+	.loft__contents {
+		position: relative;
+	}
 }
 
 .loft-light {
