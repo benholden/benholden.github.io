@@ -280,9 +280,14 @@ p:last-child {
 	position: absolute;
 	z-index: 500000;
 	padding-top: 10%;
-	padding-right: 6%;
 	padding-bottom: 5%;
 	height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	.section-content-holder {
+		padding-right: 6%;
+	}
 }
 
 .section-content {
