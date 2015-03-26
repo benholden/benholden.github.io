@@ -252,6 +252,7 @@ p:last-child {
 	z-index: 1000;
 	top: 0;
 	left: 0;
+	width: 100%;
 }
 
 .section-1 .section-table {
@@ -268,6 +269,7 @@ p:last-child {
 .section-table__cell {
 	display: table-cell;
 	vertical-align: middle;
+	width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -282,6 +284,7 @@ p:last-child {
 	padding-top: 10%;
 	padding-bottom: 5%;
 	height: 100%;
+	width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -294,9 +297,12 @@ p:last-child {
 	padding: 0px;
 	display: block;
 	max-height: 90%;
+	width: 100%;
+/*
 	-webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
 	box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.2);
+*/
 }
 
 @media only screen and (min-width: 768px) {
