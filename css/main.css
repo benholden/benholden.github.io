@@ -264,13 +264,17 @@ p:last-child {
 @media only screen and (min-width: 768px) {
 	.section-table {
 		position: absolute;
-		margin: 0;
+/*		margin: 0;*/
 	}
 }
 
-.section-1 .section-table {
-	display:table;
+@media only screen and (max-width: 767px) {
+	.section-table {
+		padding: 0;
+		/*		margin: 0;*/
+	}
 }
+
 @media only screen and (min-width: 768px) {
 	.section-table__cell {
 		display: table-cell;
