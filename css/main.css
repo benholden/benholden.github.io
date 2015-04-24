@@ -238,6 +238,7 @@ p:last-child {
 	background-image: url(../img/clouds.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 500px;
 }
 
 @media only screen and (max-width: 767px) {
