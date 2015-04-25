@@ -47,12 +47,12 @@ $(document).ready(function() {
 		   $(this).delay((i + 1) * 50).fadeToggle();
 		});
 	});
-
-	$('.nav-link').click(function(){
-		$(".nav-items li").each(function(i) {
-		   $(this).delay((i + 1) * 50).fadeOut();
-		});
-	});
+//
+//	$('.nav-link').click(function(){
+//		$(".nav-items li").each(function(i) {
+//		   $(this).delay((i + 1) * 50).fadeOut();
+//		});
+//	});
 
 	//slide to section
 	$(".nav-link-1").click(function (e){

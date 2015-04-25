@@ -60,6 +60,17 @@ a {
 	color: #e35928;
 }
 
+a:hover,a:focus,a:active {
+	color: #e35928;
+}
+
+::selection {
+	background: #bedc4a; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+	background: #bedc4a; /* Gecko Browsers */
+}
+
 
 /* ==========================================================================
 *    #COLOURS
@@ -132,6 +143,9 @@ a {
 	text-align: center;
 	font-size: 20px;
 	float: left;
+	text-transform: uppercase;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
 }
 
 .logo-text {
@@ -142,6 +156,9 @@ a {
 	line-height: 40px;
 	float: left;
 	margin-left: 12px;
+	text-transform: uppercase;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
 }
 
 .nav-button {
@@ -160,6 +177,12 @@ a {
 	transition: background-color 0.5s;
 }
 
+@media only screen and (min-width: 768px) {
+	.nav-button {
+		display: none;
+	}
+}
+
 .nav-button:hover,
 .nav-button:active,
 .nav-button:focus {
@@ -173,12 +196,27 @@ a {
 	position: absolute;
 	top: 40px;
 	right: 0;
+}
 
+@media only screen and (min-width: 768px) {
+	.nav-items {
+		padding: 0;
+		list-style: none;
+		position: absolute;
+		top: 0px;
+		right: 0;
+	}
 }
 
 .nav-items li {
 	display: none;
+}
 
+@media only screen and (min-width: 768px) {
+	.nav-items li {
+		display: block!important;
+		float: left;
+	}
 }
 
 .nav-link {
@@ -190,9 +228,23 @@ a {
 	font-size: 16px;
 	-webkit-transition: background-color 0.5s; /* For Safari 3.1 to 6.0 */
 	transition: background-color 0.5s;
+	text-transform: uppercase;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
 }
 
-.nav-link:hover {
+@media only screen and (min-width: 768px) {
+	.nav-link {
+		background-color: transparent;
+		color: white;
+		display: block;
+		text-align: right;
+		padding: 9px 15px;
+		font-size: 16px;
+	}
+}
+
+.nav-link:hover,.nav-link:focus,.nav-link:active {
 	background-color: #e35928;
 	text-decoration: none;
 	color: #fff;
@@ -351,7 +403,7 @@ h2 .glyphicon {
 	border: 0;
 	padding: 8px;
 	top: 34px;
-	right: 34px;
+	right: 28px;
 	color: #fff;
 	display: none;
 	background: #e35928;
@@ -382,6 +434,11 @@ h2 .glyphicon {
 .section-content__body {
 	padding: 28px;
 	background-color: rgba(255,255,255,0.9);
+	overflow: auto;
+}
+
+.section-content__body img {
+	width: 100%;
 }
 
 .minimised.section-table {
@@ -392,6 +449,8 @@ h2 .glyphicon {
 	top: 70px;
 	left: 0;
 }
+
+
 
 .loft .minimised.section-table {
 	top: 22%;
@@ -450,6 +509,43 @@ h2 .glyphicon {
 .clickable:hover {
 	cursor: pointer;
 }
+
+.popover {
+	text-align: center;
+	background-color: #e35928;
+	color: #fff;
+	border: 0;
+	border-radius: 0px;
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
+	box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.2);
+	white-space: normal;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.popover.top {
+	margin-top: -20px;
+}
+
+.popover.top>.arrow {
+	left: 50%;
+	margin-left: -6px;
+	border-bottom-width: 0;
+	border-top-color: #999;
+	border-top-color: rgba(0,0,0,.25);
+	bottom: -16px;
+}
+
+.popover.top>.arrow:after {
+	content: " ";
+	bottom: 6px;
+	margin-left: -15px;
+	border-bottom-width: 0;
+	border-top-color: #e35928;
+}
+
 
 .character {
 	width: 115px;
