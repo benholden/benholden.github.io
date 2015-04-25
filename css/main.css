@@ -344,17 +344,23 @@ h2 .glyphicon {
 .section-content__title__shrink {
 	position: absolute;
 	font-size: 20px;
-	border: 1px solid #fff;
+	border: 0;
 	padding: 8px;
-	top: 30px;
+	top: 0;
 	right: 30px;
 	color: #fff;
 	display: none;
+	background: #e35928;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 @media only screen and (min-width: 992px) {
 	.section-content__title__shrink {
 		display: block;
+		top: 0;
 	}
 }
 
@@ -363,7 +369,7 @@ h2 .glyphicon {
 	.section-content__title__shrink:active {
 		color: #fff;
 		text-decoration: none;
-		background-color: rgba(49,68,72,1);
+		background-color: #bedc4a;
 	}
 
 	.section-content__title__shrink span {
