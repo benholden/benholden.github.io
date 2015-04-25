@@ -346,8 +346,8 @@ h2 .glyphicon {
 	font-size: 20px;
 	border: 0;
 	padding: 8px;
-	top: 0;
-	right: 30px;
+	top: 34px;
+	right: 34px;
 	color: #fff;
 	display: none;
 	background: #e35928;
@@ -360,7 +360,6 @@ h2 .glyphicon {
 @media only screen and (min-width: 992px) {
 	.section-content__title__shrink {
 		display: block;
-		top: 0;
 	}
 }
 
