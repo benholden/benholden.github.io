@@ -173,6 +173,7 @@ $(document).ready(function() {
 	//take scredriver
 	$('.screwdriver').click(function() {
 		$(this).hide();
+		$('.inventory').show();
 		$('.inventory-screwdriver').removeClass('inventory-hidden');
 	});
 
