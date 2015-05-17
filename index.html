@@ -262,9 +262,13 @@
 							<a href="#" class="section-content__title__shrink"><span class="glyphicon glyphicon-resize-small " aria-hidden="true"></span></a>
 						</div>
 						<div class="section-content__body">
-							<p>I'm still developing the site, and will have a contact form and everything right here!</p>
-
-							<p>In the mean time, if you'd like to get in touch you can always say hello on twitter <a href="https://twitter.com/BenHoldenPrime">@BenHoldenPrime</a></p>
+							<form action="https://getsimpleform.com/messages?form_api_token=d30c2ac6d5df425e67fe53151e29a815" method="post">
+								<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+								<input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+								<!-- all your input fields here.... -->
+								<input type='text' name='test' />
+								<input type='submit' value='Test form' />
+							</form>
 <!--
 							<p class="text-right">
 								<a class="btn btn-primary" href="#" role="button">Read more &raquo;</a>
