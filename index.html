@@ -262,6 +262,7 @@
 							<a href="#" class="section-content__title__shrink"><span class="glyphicon glyphicon-resize-small " aria-hidden="true"></span></a>
 						</div>
 						<div class="section-content__body">
+<!--
 							<form class="form-horizontal" action="https://getsimpleform.com/messages?form_api_token=d30c2ac6d5df425e67fe53151e29a815" method="post">
 								<input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
 								<div class="form-group">
@@ -287,6 +288,55 @@
 										<button type="submit" class="btn btn-primary">Submit</button>
 									</div>
 								</div>
+							</form>
+-->
+							<form id="demo-form" role="form" class="form-horizontal" action="https://getsimpleform.com/messages?form_api_token=d30c2ac6d5df425e67fe53151e29a815" method="post" enctype="multipart/form-data">
+
+								<input type="hidden" name="redirect_to" value="#">
+								<input type="hidden" name="_folder" value="contact">
+								<input type="hidden" name="_spam" value="message">
+
+
+								<div class="form-group">
+									<label>Name</label>
+									<input type="text" name="name" class="form-control">
+								</div>
+
+
+								<div class="form-group">
+									<label>Avatar</label>
+									<input type="file" name="avatar" class="form-control">
+								</div>
+
+
+								<div class="form-group">
+									<label>Address</label>
+									<textarea name="address" rows="8" class="form-control"></textarea>
+								</div>
+
+
+								<div class="form-group">
+									<label>Message</label>
+									<textarea type="text" name="message" class="form-control"></textarea>
+								</div>
+
+
+								<div class="form-group">
+									<label>Gender</label>
+									<select name="gender" class="form-control">
+										<option value="M">Male</option>
+										<option value="F">Female</option>
+									</select>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="contact" value="Yes"> Do you want us to contact you?
+										<input type="hidden" name="contact" value="No">
+									</label>
+								</div>
+
+								<button type="submit" class="btn btn-primary">Submit</button>
 							</form>
 						</div>
 					</div>
