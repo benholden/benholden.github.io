@@ -262,18 +262,32 @@
 							<a href="#" class="section-content__title__shrink"><span class="glyphicon glyphicon-resize-small " aria-hidden="true"></span></a>
 						</div>
 						<div class="section-content__body">
-							<form action="https://getsimpleform.com/messages?form_api_token=d30c2ac6d5df425e67fe53151e29a815" method="post">
-								<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+							<form class="form-horizontal" action="https://getsimpleform.com/messages?form_api_token=d30c2ac6d5df425e67fe53151e29a815" method="post">
 								<input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
-								<!-- all your input fields here.... -->
-								<input type='text' name='test' />
-								<input type='submit' value='Test form' />
+								<div class="form-group">
+									<label for="coolName" class="col-sm-2 control-label">Name</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="coolName" placeholder="Who are you?">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="coolEmail" class="col-sm-2 control-label">Email</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" id="coolEmail" placeholder="How can I get back to you?">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="coolMessage" class="col-sm-2 control-label">Message</label>
+									<div class="col-sm-10">
+										<textarea class="form-control" id="coolMessage" placeholder="What would you like to talk about?"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</div>
 							</form>
-<!--
-							<p class="text-right">
-								<a class="btn btn-primary" href="#" role="button">Read more &raquo;</a>
-							</p>
--->
 						</div>
 					</div>
 				</div>
