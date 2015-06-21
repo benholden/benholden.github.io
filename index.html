@@ -18,10 +18,6 @@
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
 	<body>
-		<!--[if lt IE 7]>
-			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-
 	<header class="container-fluid header-bar dk-grey-bg">
 		<!-- Example row of columns -->
 
@@ -101,11 +97,12 @@
 							<p>I am currently doing my work at <a href="http://www.wearesigma.com/">Sigma</a>, and have previously helped comanies like <a href="http://www.envirofone.com/en-gb">Envirofone</a> with improving User Experience.</p>
 
 							<p>I'm building this site in public on Github Pages, and you can check back from time to time to see how I'm getting on. If you use the minimise buttons on these content panels you can play my simple point and click game (Beware its not finished!)</p>
-<!--
 							<p class="text-right">
-								<a class="btn btn-primary" href="#" role="button">Read more &raquo;</a>
+								<!-- Button trigger modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gameInfo">
+									Would you like to play a game?
+								</button>
 							</p>
--->
 						</div>
 					</div>
 				</div>
@@ -346,6 +343,30 @@
 			<p>&copy; Company 2014</p>
 			</div>
 		</footer>
+
+		<!-- Modal -->
+		<div class="modal fade" id="gameInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="section-content">
+					<div class="section-content__title">
+						<h2>Let's play</h2>
+						<button type="button" class="section-content__title__shrink" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+					</div>
+					<div class="section-content__body">
+						<p>Inspired by the classic Lucasarts Adventure games I grew up with, I have made this site into one of my own. sort of.</p>
+
+						<p>Minimise the each floors content box by clicking the <span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span> button, then explore and click around to find objects to unlock the hidden party floor!</p>
+
+						<p>if you get stuck, check out the <a href="#">Walkthrough</a></p>
+						<p class="text-right">
+							<!-- Button close modal -->
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Got it!</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
