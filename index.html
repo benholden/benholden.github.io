@@ -16,6 +16,12 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+		<!-- Important Owl stylesheet -->
+		<link rel="stylesheet" href="js/vendor/owl-carousel/owl.carousel.css">
+
+		<!-- Default Owl Theme -->
+		<link rel="stylesheet" href="js/vendor/owl-carousel/owl.theme.css">
 	</head>
 	<body>
 	<header class="container-fluid header-bar dk-grey-bg">
@@ -167,6 +173,16 @@
 									<img src="img/drm.jpg" alt="Diversity Role Models Website thumbnail">
 								</div>
 							</div>
+
+<!--
+							<div id="work-slider" class="owl-carousel owl-theme">
+
+								<div class="item"><img src="img/campdigital.jpg" alt="Camp Digital Website thumbnail"></div>
+								<div class="item"><img src="img/envirofone.jpg" alt="Envirofone Email thumbnail"></div>
+								<div class="item"><img src="img/drm.jpg" alt="Diversity Role Models Website thumbnail"></div>
+
+							</div>
+-->
 <!--
 							<p class="text-right">
 								<a class="btn btn-primary" href="#" role="button">Read more &raquo;</a>
@@ -372,9 +388,21 @@
 
 		<script src="js/vendor/bootstrap.min.js"></script>
 
+		<!-- Include js plugin -->
+		<script src="js/vendor/owl-carousel/owl.carousel.js"></script>
+
 		<script src="js/main.js"></script>
 
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+									})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-64481656-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
 
 	</body>
 </html>
