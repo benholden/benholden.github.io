@@ -29,6 +29,7 @@ $(document).ready(function() {
 		}
 		else if ($window.scrollTop() <= loft && fallen === true) {
 			$('.character').addClass('character-rocket');
+			$('.character').removeClass('character-elavator--star');
 		}
 
 		if ($window.scrollTop() <= 10) {
@@ -258,5 +259,3 @@ $(document).ready(function() {
 
 	});
 });
-
-
