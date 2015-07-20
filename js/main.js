@@ -25,16 +25,23 @@ $(document).ready(function() {
 		if ( $window.scrollTop() >= loft ) {
 			$('.character').addClass('character-elavator');
 			$('.character').removeClass('character-rocket');
+			$('.character-star').addClass('character-star-elavator');
+			$('.character-star').removeClass('character-star-rocket');
 			fallen = true;
 		}
 		else if ($window.scrollTop() <= loft && fallen === true) {
 			$('.character').addClass('character-rocket');
-			$('.character').removeClass('character-elavator--star');
+			$('.character').removeClass('character-elavator');
+			// $('.character').removeClass('character-elavator--star');
+			$('.character-star').addClass('character-star-rocket');
+			$('.character-star').removeClass('character-star-elavator');
 		}
 
 		if ($window.scrollTop() <= 10) {
 			$('.character').removeClass('character-elavator');
 			$('.character').removeClass('character-rocket');
+			$('.character-star').removeClass('character-star-elavator');
+			$('.character-star').removeClass('character-star-rocket');
 			fallen = false;
 		}
 	});
@@ -184,8 +191,22 @@ $(document).ready(function() {
 	});
 
 	//angry claire
-	$('.brew--claire').click(function() {
-		$('.claire').hide();
+	// $('.brew--claire').click(function() {
+	// 	$('.claire').hide();
+	// });
+
+	//claire letter
+	$('.claire').click(function() {
+		if ($('.character-star').is(":visible")) {
+			$('.letter').show();
+		}
+	});
+
+	//take letter
+	$('.letter').click(function() {
+		$(this).hide();
+		$('.inventory').show();
+		$('.inventory-letter').removeClass('inventory-hidden');
 	});
 
 	//drop menu
@@ -218,8 +239,18 @@ $(document).ready(function() {
 
 		if ($('.inventory-coins').hasClass('inventory-selected')) {
 			$(this).attr('src', 'img/tshirt--hanger.svg');
-			$('.character').addClass('character-elavator--star');
+			// $('.character').addClass('character-elavator--star');
+			$('.character-star').show();
+			$('.character').hide();
+		}
+	});
 
+	//post letter
+	$('.postbox').click(function() {
+
+		if ($('.inventory-letter').hasClass('inventory-selected')) {
+			$('.parcel').show();
+			$('.inventory-letter').addClass('inventory-hidden');
 		}
 	});
 
