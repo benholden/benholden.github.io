@@ -1,0 +1,19 @@
+{
+  "name": "benholden",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "gulpfile.js",
+  "author": "Ben Holden",
+  "devDependencies": {
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-ruby-sass": "^2.0.3",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
