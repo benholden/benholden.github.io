@@ -7,7 +7,8 @@ $(document).ready(function() {
 	var windowHeight = $(window).height();
 	$(".page-section").height(windowHeight);
 
-
+	// Hide Underground
+	$('.section-6').hide();
 
 	//Resize sections On Resize
 		$(window).resize(function(){
@@ -142,8 +143,19 @@ $(document).ready(function() {
 	//open panel
 	$('.fuse--cover').click(function() {
 		if ($('.inventory-crowbar').hasClass('inventory-selected')) {
-			$('.fuse--broken').show();
+			$('.machinery').show();
 			$(this).animate({bottom: '12.5%'}, 200, 'linear');
+		}
+	});
+
+	//fix Machinery
+	$('.machinery').click(function() {
+		if ($('.inventory-cog').hasClass('inventory-selected')) {
+			$('.machinery-blank').show();
+			$(this).hide();
+			$('.cog').show();
+			$('.inventory-cog').addClass('inventory-hidden');
+			$('.section-6').show();
 		}
 	});
 
@@ -196,7 +208,7 @@ $(document).ready(function() {
 	// });
 
 	//claire letter
-	$('.claire').click(function() {
+	$('.seating').click(function() {
 		if ($('.character-star').is(":visible")) {
 			$('.letter').show();
 		}
@@ -236,22 +248,33 @@ $(document).ready(function() {
 
 	//buy tshirt
 	$('.tshirt--star').click(function() {
-
 		if ($('.inventory-coins').hasClass('inventory-selected')) {
 			$(this).attr('src', 'img/tshirt--hanger.svg');
-			// $('.character').addClass('character-elavator--star');
 			$('.character-star').show();
 			$('.character').hide();
+			$('.inventory-coins').addClass('inventory-hidden');
 		}
 	});
 
 	//post letter
 	$('.postbox').click(function() {
-
 		if ($('.inventory-letter').hasClass('inventory-selected')) {
 			$('.parcel').show();
 			$('.inventory-letter').addClass('inventory-hidden');
 		}
+	});
+
+	//Open Box
+	$('.parcel').click(function() {
+		$(this).hide();
+		$('.parcel-cog').show();
+	});
+
+	//take cog
+	$('.parcel-cog').click(function() {
+		$(this).hide();
+		$('.parcel-open').show();
+		$('.inventory-cog').removeClass('inventory-hidden');
 	});
 
 	$('[data-toggle="popover"]').popover({trigger: 'click','placement': 'top'});

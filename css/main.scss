@@ -278,7 +278,7 @@ a:hover,a:focus,a:active {
 }
 
 .inventory li a.inventory-hidden {
-	display: none;
+	display: none!important;
 }
 
 .inventory li a.inventory-selected {
@@ -514,6 +514,7 @@ h2 .glyphicon {
 
 .popover {
 	text-align: center;
+	width: 300px;
 	background-color: #e35928;
 	color: #fff;
 	border: 0;
@@ -1095,6 +1096,26 @@ h2 .glyphicon {
 	z-index: 10;
 }
 
+.parcel-open {
+	width: 15%;
+  max-width: 127px;
+  position: absolute;
+  bottom: 2%;
+  left: -13%;
+  z-index: 100;
+	display: none;
+}
+
+.parcel-cog {
+	width: 15%;
+  max-width: 127px;
+  position: absolute;
+  bottom: 2%;
+  left: -13%;
+  z-index: 100;
+	display: none;
+}
+
 .parcel {
 	width: 15%;
   max-width: 127px;
@@ -1200,7 +1221,44 @@ h2 .glyphicon {
 	bottom: 7.8%;
 }
 
-.fuse--fixed{
+@-webkit-keyframes spinnerRotate
+{
+  from{-webkit-transform:rotate(0deg);}
+  to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes spinnerRotate
+{
+  from{-moz-transform:rotate(0deg);}
+  to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes spinnerRotate
+{
+  from{-ms-transform:rotate(0deg);}
+  to{-ms-transform:rotate(360deg);}
+}
+.cog {
+	width: 10%;
+	max-width: 71px;
+	position: absolute;
+	bottom: 64%;
+	right: 72.5%;
+	z-index: 10;
+	display: none;
+  -webkit-animation-name: spinnerRotate;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spinnerRotate;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spinnerRotate;
+  -ms-animation-duration: 5s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+}
+
+.machinery-blank {
 	width: 16%;
 	max-width: 118px;
 	position: absolute;
@@ -1210,7 +1268,7 @@ h2 .glyphicon {
 	display: none;
 }
 
-.fuse--broken {
+.machinery {
 	width: 16%;
 	max-width: 118px;
 	position: absolute;
@@ -1706,6 +1764,34 @@ form {
 
 form .btn-primary {
 	margin-top: 0;
+}
+
+/* ===================================
+*    #SHOP - Section 6 specific styles
+*===================================== */
+.section-6 {
+	background-image: url(../img/underground-bg.gif);
+	background-size: auto;
+	background-position: bottom;
+	background-repeat: repeat-x;
+}
+
+.page-section.section-6:before {
+	background-color: red;
+}
+
+.underground {
+	background-color: transparent;
+}
+
+.underground:before {
+	content: '';
+  background: #667b80;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 
